@@ -52,11 +52,16 @@ colors = np.array(colors) # array haline getirdik
 colors = np.tile(colors, (18,1)) # kutuları çoğalttık
 
 
+# modeli import ediyoruz : algoritma başlangıcı
+model = cv2.dnn.readNetFromDarknet("C:/Users/mertf/Desktop/python/YOLO Tutorial/pretrained_model/yolov3.cfg", "C:/Users/mertf/Desktop/python/YOLO Tutorial/pretrained_model/yolov3.weights")
+layers = model.getLayerNames()
+#çıktı katmanlarını araştırıyoruz
+output_layer = [layers[layer[0]-1] for layer in model.getUnconnectedOutLayers()]
 
+model.setInput(img_blob)
 
-
-
-
-
+# çıktı katmanlarını detectiona sokuyoruz
+detection_layers = model.forward(output_layer)
+# çıktı katmanlarının içindeki değerleri almış olduk.
 
 
