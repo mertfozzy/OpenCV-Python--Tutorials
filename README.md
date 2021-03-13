@@ -1,4 +1,4 @@
-![photo](https://miro.medium.com/max/1838/1*cb1HvpKrq8YaSdmLxGJ5lA.png)
+![photo](https://github.com/mertfozzy/OpenCV-Python--Tutorials/blob/main/photo.png?raw=true)
 # OpenCV-Python--Tutorials
 Python 3.9.2 &amp; OpenCV Built on PyCharm Pro
 
